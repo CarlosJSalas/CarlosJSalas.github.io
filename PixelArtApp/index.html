@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>DrawPixel</title>
+</head>
+<body onmouseup="setFalse()">
+    <div id="generatedImage"></div>
+    <div class="betaLogo">
+        <img src="./img/dpix.png" alt="DrawPixel" class="logoApp">
+        <span>BETA</span>
+    </div>
+    <br>
+    <div class="options center-items-2">
+        <!--<button class="optionButton" onclick="window.print();">Print</button>-->
+        <button id="btnDownload" class="optionButton download-b">Download ⬇️</button>
+        <button class="optionButton margin-r-20 delete-b" onclick="_redirect()">Delete ❌</button>
+        <button class="optionButton size-1-b" onclick="setButtonSize1()">✏️</button>
+        <button class="optionButton size-2-b" onclick="setButtonSize2()">🖌️</button>
+        <button class="optionButton size-2-b" onclick="setButtonSize3()">💧</button>
+        <button class="optionButton size-2-b" onclick="setButtonSize0()">🧽</button>
+        <button class="optionButton margin-r-20 size-2-b" onclick="setButtonSizem1()">🧹</button>
+        <button class="optionButton size-2-b" id="setBgColor">Set BG Color 🌈</button>
+        <button class="optionButton margin-r-20 size-2-b" id="hidebg">Hide 🏁</button> 
+        <a href="#info"><button class="optionButton size-2-b">❔</button></a>
+    </div>
+    <div class="options-2">
+        <input type="checkbox" id="bgswitch"><label class="margin-r-10" id="bgswitch" title="This option remove background" for="bgswitch">Remove BG</label>
+        <input type="checkbox" id="pixelsize"><label class="margin-r-10" id="labelsize" title="This option transform all pixel to a real pixel size" for="pixelsize">Real pixel size</label>
+        <!--<input id="pixelSizeSelector" type="range" min="8" max="30" value="8" oninput="setNewPixelSize(this.value)" onchange="setNewPixelSize(this.value)">-->
+        <span class="sizeSelector" onclick="setNewPixelSize(4)">X1</span>
+        <span class="sizeSelector" onclick="setNewPixelSize(8)">X2</span>
+        <span class="sizeSelector" onclick="setNewPixelSize(16)">X3</span>
+        <span class="sizeSelector" onclick="setNewPixelSize(24)">X4</span>
+
+        <label for="flipOptions">Flip:</label>
+        <span class="flip" id="flipx">X</span>
+        <span class="flip" id="flipy">Y</span>
+
+        
+        <label for="flipOptions">Opacity:</label>
+        <input id="opacityColor" placeholder="0 - 1" class="inputOpacity" value="1" type="text">
+            
+        <span class="box1">
+            <input id="inputWidth" placeholder="width" class="inputSize" type="text"><label for="separator"> x</label>
+            <input id="inputHeight" placeholder="height" class="inputSize" type="text">
+            <a id="resizeScreen" class="sizeSelector">Resize</a>
+        </span>
+    </div>
+    <div class="pixelCanvas center-items-2" id="pxcanvas">
+        <div id="printable" class="responsive-canvas">
+            
+        <div class="clean"></div>
+        </div>
+    </div>
+
+    <p class="slideTag">⬅️ Slide ➡️</p>
+    <br>
+    <div class="colors center-items-2">
+        <input class="inputColor newColor" type="color" id="wheelColor">
+        <div style="background-color: #ffffff;" class="newColor hide-mobile-mini" onclick="setDrawColor('ffffff')"><span></span></div>
+        <div style="background-color: #ff0000;" class="newColor" onclick="setDrawColor('ff0000')"><span></span></div>
+        <div style="background-color: #FF7000;" class="newColor hide-mobile" onclick="setDrawColor('FF7000')"><span></span></div>
+        <div style="background-color: #ffff00;" class="newColor" onclick="setDrawColor('ffff00')"><span></span></div>
+        <div style="background-color: #00ff00;" class="newColor" onclick="setDrawColor('00ff00')"><span></span></div>
+        <div style="background-color: #00ffff;" class="newColor hide-mobile" onclick="setDrawColor('00ffff')"><span></span></div>
+        <div style="background-color: #0097FF;" class="newColor" onclick="setDrawColor('0097FF')"><span></span></div>
+        <div style="background-color: #0000ff;" class="newColor hide-mobile" onclick="setDrawColor('0000ff')"><span></span></div>
+        <div style="background-color: #8B00FF;" class="newColor hide-mobile" onclick="setDrawColor('8B00FF')"><span></span></div>
+        <div style="background-color: #ff00ff;" class="newColor hide-mobile" onclick="setDrawColor('ff00ff')"><span></span></div>
+        <br>
+        <div class="changeDisplay">
+            <div style="background-color: #000000;" class="newColor" onclick="setDrawColor('000000')"><span></span></div>
+            <div style="background-color: #808080;" class="newColor hide-mobile-mini" onclick="setDrawColor('808080')"><span></span></div>
+            <div style="background-color: #aa3333;" class="newColor" onclick="setDrawColor('aa3333')"><span></span></div>
+            <div style="background-color: #bb6700;" class="newColor hide-mobile" onclick="setDrawColor('bb6700')"><span></span></div>
+            <div style="background-color: #aaaa33;" class="newColor" onclick="setDrawColor('aaaa33')"><span></span></div>
+            <div style="background-color: #33aa33;" class="newColor" onclick="setDrawColor('33aa33')"><span></span></div>
+            <div style="background-color: #33aaaa;" class="newColor hide-mobile" onclick="setDrawColor('33aaaa')"><span></span></div>
+            <div style="background-color: #0064A9;" class="newColor" onclick="setDrawColor('0064A9')"><span></span></div>
+            <div style="background-color: #3333aa;" class="newColor hide-mobile" onclick="setDrawColor('3333aa')"><span></span></div>
+            <div style="background-color: #56009E;" class="newColor hide-mobile" onclick="setDrawColor('56009E')"><span></span></div>
+            <div style="background-color: #aa33aa;" class="newColor hide-mobile" onclick="setDrawColor('aa33aa')"><span></span></div>
+            <br>
+            
+            <div id="newColor1" style="background-color: #eeeeee;" class="newColor" onclick="getBgColor(1)"><span></span></div>
+            <div id="newColor11" style="background-color: #eeeeee;" class="newColor hide-mobile-mini" onclick="getBgColor(11)"><span></span></div>
+            <div id="newColor2" style="background-color: #eeeeee;" class="newColor" onclick="getBgColor(2)"><span></span></div>
+            <div id="newColor3" style="background-color: #eeeeee;" class="newColor hide-mobile" onclick="getBgColor(3)"><span></span></div>
+            <div id="newColor4" style="background-color: #eeeeee;" class="newColor" onclick="getBgColor(4)"><span></span></div>
+            <div id="newColor5" style="background-color: #eeeeee;" class="newColor" onclick="getBgColor(5)"><span></span></div>
+            <div id="newColor6" style="background-color: #eeeeee;" class="newColor hide-mobile" onclick="getBgColor(6)"><span></span></div>
+            <div id="newColor7" style="background-color: #eeeeee;" class="newColor" onclick="getBgColor(7)"><span></span></div>
+            <div id="newColor8" style="background-color: #eeeeee;" class="newColor hide-mobile" onclick="getBgColor(8)"><span></span></div>
+            <div id="newColor9" style="background-color: #eeeeee;" class="newColor hide-mobile" onclick="getBgColor(9)"><span></span></div>
+            <div id="newColor10" style="background-color: #eeeeee;" class="newColor hide-mobile" onclick="getBgColor(10)"><span></span></div>
+            <br>
+            
+            <div onclick="setNewpalleteColor(1)" class="setNewColor"><span></span></div>
+            <div onclick="setNewpalleteColor(11)" class="setNewColor hide-mobile-mini"><span></span></div>
+            <div onclick="setNewpalleteColor(2)" class="setNewColor"><span></span></div>
+            <div onclick="setNewpalleteColor(3)" class="setNewColor hide-mobile"><span></span></div>
+            <div onclick="setNewpalleteColor(4)" class="setNewColor"><span></span></div>
+            <div onclick="setNewpalleteColor(5)" class="setNewColor"><span></span></div>
+            <div onclick="setNewpalleteColor(6)" class="setNewColor hide-mobile"><span></span></div>
+            <div onclick="setNewpalleteColor(7)" class="setNewColor"><span></span></div>
+            <div onclick="setNewpalleteColor(8)" class="setNewColor hide-mobile"><span></span></div>
+            <div onclick="setNewpalleteColor(9)" class="setNewColor hide-mobile"><span></span></div>
+            <div onclick="setNewpalleteColor(10)" class="setNewColor hide-mobile"><span></span></div>
+            <!--
+            <div style="background-color: #ffffff;" class="newColor" onclick="setDrawColor('ffffff')"><span></span></div>
+            <div style="background-color: #832929;" class="newColor" onclick="setDrawColor('832929')"><span></span></div>
+            <div style="background-color: #9b5500;" class="newColor" onclick="setDrawColor('9b5500')"><span></span></div>
+            <div style="background-color: #8e8e23;" class="newColor" onclick="setDrawColor('8e8e23')"><span></span></div>
+            <div style="background-color: #288528;" class="newColor" onclick="setDrawColor('288528')"><span></span></div>
+            <div style="background-color: #247d7d;" class="newColor" onclick="setDrawColor('247d7d')"><span></span></div>
+            <div style="background-color: #085385;" class="newColor" onclick="setDrawColor('085385')"><span></span></div>
+            <div style="background-color: #212168;" class="newColor" onclick="setDrawColor('212168')"><span></span></div>
+            <div style="background-color: #400d6b;" class="newColor" onclick="setDrawColor('400d6b')"><span></span></div>
+            <div style="background-color: #7d197d;" class="newColor" onclick="setDrawColor('7d197d')"><span></span></div>
+            <div style="background-color: #700d40;" class="newColor" onclick="setDrawColor('700d40')"><span></span></div>
+            -->
+        </div>
+        <div class="clean"></div>
+    </div>
+    
+    <!--<img src="./img/nameImgApp.png" alt="DrawPixel" class="logoApp2">-->
+    <div class="info-container">
+        <div class="artImg-container">
+            <img src="./img/artImg22.png" alt="artimg22">
+            <img src="./img/artImg21.png" alt="artimg21">
+            <img src="./img/artImg20.png" alt="artimg20">
+            <img src="./img/artImg17.png" alt="artimg17">
+            <img src="./img/artImg16.png" alt="artimg16">
+            <img src="./img/artImg15.png" alt="artimg15">
+            <img src="./img/artImg14.png" alt="artimg14">
+            <img src="./img/artImg13.png" alt="artimg13">
+            <img src="./img/artImg12.png" alt="artimg12">
+            <img src="./img/artImg11.png" alt="artimg11">
+            <img src="./img/artImg10.png" alt="artimg10">
+            <img src="./img/artImg9.png" alt="artimg9">
+            <img src="./img/artImg8.png" alt="artimg8">
+            <img src="./img/artImg7.png" alt="artimg7">
+            <img src="./img/artImg6.png" alt="artimg6">
+            <img src="./img/artImg5.png" alt="artimg5">
+            <img src="./img/artImg4.png" alt="artimg4">
+            <img src="./img/artImg3.png" alt="artimg3">
+            <img src="./img/artImg2.png" alt="artimg2">
+            <img src="./img/artImg1.png" alt="artimg1">
+
+        </div>
+        <h2 id="info" class="title-h2">Options Info:</h2>
+        <div class="option-info">
+            <h2>✏️</h2>
+            <p>The pencil is a simple tool that draws in a 1x1 range; you can use it to make outlines, shadows, or simply to paint freely.</p>
+            <img class="explainGif" src="./img/gif/explain1.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>🖌️</h2>
+            <p>The brush is a larger version of the pencil, it works in the same way but painting in a 3x3 range in the shape of a cross. It can be used to make thicker lines or by painting in a single pixel to draw a cross.</p>
+            <img class="explainGif" src="./img/gif/explain2.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>💧</h2>
+            <p>The dropper is a somewhat different tool from usual, it replaces any color we want with another selected in the color palette. Regardless of whether the color is connected or not, it completely replaces it. It is useful when we want to change color tones in the entire drawing.</p>
+            <img class="explainGif" src="./img/gif/explain3.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>🧽</h2>
+            <p>Contrary to the pencil, the sponge instead of drawing in its place removes, leaving a transparent trace. It works in a 1x1 range and is used to correct small errors while painting.</p>
+            <img class="explainGif" src="./img/gif/explain4.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>🧹</h2>
+            <p>The broom works in the same range as the brush (3x3) in the shape of a cross, but erases leaving transparency behind its path just like the sponge, it is used to erase larger errors or to delete sections of a larger drawing.</p>
+            <img class="explainGif" src="./img/gif/explain5.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>🌈</h2>
+            <p>The rainbow is a tool that allows you to change the background of a drawing regardless of what you have already drawn, you can change the background after having drawn part of the drawing without losing your progress. The rainbow only replaces areas with transparency with the selected color, if you want it to replace already painted areas you can erase them with one of the erasers and it will behave normally.</p>
+            <img class="explainGif" src="./img/gif/explain6.gif" alt="explainGif">
+        </div>
+
+        <div class="option-info">
+            <h2>🏁</h2>
+            <p>With the background pattern, you can see which parts you have drawn and which parts you haven't, as you hover over it darkens the areas you haven't painted and lightens the painted areas, it is useful when the selected color blends in with the background and you want to know what you still need to paint.</p>
+            <img class="explainGif" src="./img/gif/explain7.gif" alt="explainGif">
+        </div>
+    
+        <footer><p>Copyright Carlos Salas</p></footer>
+    </div>
+</body>
+</html>
