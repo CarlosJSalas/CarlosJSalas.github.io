@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolarVibes - About</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Yellowtail&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div>
+        <ul class="header-links">
+            <img class="logo" src="../img/MyPixelArt - 2023-12-02T171909.862.png" alt="heladoLogo">
+            <div class="title"><a href="../index.html">PolarVibes</a></div>
+            <span><img class="menu-icon" src="../img/svg/bars-solid.svg" alt="iconsvg"></span>
+            
+            <br class="break-mid"/>
+            <li><a href="./about.html"><img class="icon-svg" src="../img/svg/circle-info-solid.svg" alt="iconsvg"> Sobre</a></li>
+            
+            <br class="break-short"/>
+            <li><a href="./products.html"><img class="icon-svg" src="../img/svg/ice-cream-solid.svg" alt="iconsvg"> Productos</a></li>
+            
+            <br class="break-short"/>
+            <li><a class="selected" href="#"><img class="icon-svg" src="../img/svg/phone-solid.svg" alt="iconsvg"> Contactos</a></li>
+            
+            <br class="break-short"/>
+            <li><a href="./cart.html"><img class="icon-svg" src="../img/svg/cart-shopping-solid.svg" alt="iconsvg"> Carrito</a></li>
+        </ul>
+        <div class="header-correction-space"></div>
+    </div>
+    
+    <div class="contact-form-container">
+        <form class="contact-form" action="">
+            <h2 class="header-products">Formulario de contacto</h2>
+            <label for="contact-form">Indique el motivo del contacto</label>
+            <br>
+            <select class="input-border" name="select-reason" id="select-reason">
+                <option value="Work">Trabajo</option>
+                <option value="ProblemWithAPurchase">Problema con una compra</option>
+                <option value="ProblemWithProducts">Problema con producto</option>
+                <option value="other">Otro motivo</option>
+            </select>
+
+            <br>
+            <span class="inline-info">
+                <label for="name">Nombre:</label>
+                <input class="input-border" type="text" name="enter-name" id="enter-name">
+            </span>
+            <span class="inline-info">
+                <label for="last-name">Apellido:</label>
+                <input class="input-border" type="text" name="enter-last-name" id="enter-last-name">
+            </span>
+            <span class="inline-info">
+                <label for="email">Email:</label>
+                <input class="input-border" type="text" name="enter-mail" id="enter-mail">
+            </span>
+            <span class="inline-info">
+                <label for="phone">Telefono:</label>
+                <input class="input-border" type="text" name="enter-phone" id="enter-phone">
+            </span>
+            <span class="inline-info">
+                <label for="postal-code">Morada:</label><br>
+                <input class="input-border" type="text" name="address" id="address">
+            </span>
+            <span class="inline-info">
+                <label for="postal-code">Codigo postal:</label><br>
+                <input class="input-border" type="text" name="enter-postal-code" id="enter-postal-code">
+            </span>
+            <br>
+
+            <label for="reason">Describa el motivo:</label><br>
+            <textarea name="reason" id="reason" cols="30" rows="10" placeholder="Motivo"></textarea>
+            <br>
+            <label for="reason">Anexar archivo</label><br>
+            <input type="file" name="document" id="append-document"> 
+            <br><br>
+            <input type="checkbox" name="use-conditions" id="use-conditions">
+            <label for="use-conditions"> He leido y acepto los terminos y condiciones de uso.</label>
+            <br>
+            <input class="submit-button" type="button" value="Enviar">
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <div class="foo-links">
+            <p class="foo-title">Links utiles</p>
+            <a class="foo-individual-link" href="#">Sobre nosotros</a><br class="break-mobile">
+            <a class="foo-individual-link" href="#">Preguntas frecuentes</a><br class="break-mobile">
+            <a class="foo-individual-link" href="#">Trabaje con nosotros</a>
+        </div>
+        <hr class="foo-hr">
+        <div class="foo-social">
+            <p class="foo-title">Redes Sociales</p>
+            <div class="social-icons">
+                <a class="foo-individual-link" href="#"><img class="social-icon" src="../img/svg/square-instagram.svg" alt="social-icon"> </a>
+                <a class="foo-individual-link" href="#"><img class="social-icon" src="../img/svg/square-twitter.svg" alt="social-icon"> </a>
+                <a class="foo-individual-link" href="#"><img class="social-icon" src="../img/svg/square-youtube.svg" alt="social-icon"> </a>
+                <a class="foo-individual-link" href="#"><img class="social-icon" src="../img/svg/square-pinterest.svg" alt="social-icon"> </a>
+            </div>
+        </div>
+        <hr class="foo-hr">
+        <div class="foo-contacts">
+            <p class="foo-title">Contactos</p>
+            <a class="foo-individual-link" href="#"><img class="info-icons" src="../img/svg/location-dot-solid.svg" alt="social-icon"> PolarVibes - Camino del infante calle numero 34</a><br class="break-mobile">
+            <a class="foo-individual-link" href="tel:916865014"><img class="info-icons" src="../img/svg/phone-solid.svg" alt="social-icon"> Telefono: 987654321</a><br class="break-mobile">
+            <a class="foo-individual-link" href="mailto:polarvibes@polarvibes.com"><img class="info-icons" src="../img/svg/envelope-solid.svg" alt="social-icon"> polarvibes@polarvibes.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
