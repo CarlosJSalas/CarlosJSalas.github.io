@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+
+    <title>Carlos Salas</title>
+</head>
+<body>
+
+    <!--
+    Puntos a tener en cuenta:
+        - Responsividad
+        - Seccion de proyectos
+        - contactos & info personal
+        - "Tecnologias usadas para la realizacion de esta pagina"
+        - skills
+    -->
+
+    <div class="menu">
+        <ul>
+            <li><a href="#proyects">Proyects</a></li>
+            <li><a href="#about">About</a></li>
+            <!--<li><a href="#technologies">Technologies</a></li>-->
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </div>
+    
+    <div class="banner">
+        <!--<h1>My Portfolio Carlos Salas</h1>-->
+        <img class="desktop" src="./img/banner4.jpg" alt="banner">
+    </div>
+
+    <div class="body-card">
+        <div class="container-body">
+            <div class="about">
+                <img class="profile" src="./img/personalPicture.jpg" alt="About">
+                <h2 id="about">About Me</h2>
+                <p class="card-info">I'm Carlos Jesús Barreto Salas, programming student at 'Escola Profissional Cristóvão Colombo'. I am currently 19 years old, I was born in "los teques", Miranda state, Venezuela, I lived there until I was 14 years old, and then moved to the place where I currently live. "Madeira" A tourist island in Portugal, in Venezuela I learned Spanish and in Portugal I learned Portuguese and English, I don't know which area I will go to, but I love programming and would like to be a web developer.</p>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><img src="./img/logo1.png" alt="social"></a></li>
+                        <li><a href="#"><img src="./img/logo2.png" alt="social"></a></li>
+                        <li><a href="#"><img src="./img/logo3.png" alt="social"></a></li>
+                        <li><a href="#"><img src="./img/logo4.png" alt="social"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-1">
+            <div class="container-body">
+                <div class="white-section">
+                    <h2>Proyects</h2>
+                </div>
+            </div>
+            <div class="container-body-2">
+                <div class="white-section">
+                    <div class="proyects" id="proyects">
+                        <div class="proyect">
+                            <a href="http://localhost/CodeIgniter/NatyNails/">
+                                <img src="./img/proyect1.png" alt="proyect">
+                                <p>NatyNails - PAP</p>
+                                <p class="tecnologies">CodeIgniter</p>
+                                <p class="tecnologies">MySQL</p>
+                                <p class="tecnologies">PHP</p>
+                                <p class="tecnologies">JavaScript</p>
+                                <p class="tecnologies">HTML</p>
+                                <p class="tecnologies">CSS</p>
+                            </a>
+                        </div>
+
+                        <div class="proyect">
+                            <a href="http://localhost/Conect4/">
+                                <img src="./img/proyect2.png" alt="proyect">
+                                <p>Connect4 - Game</p>
+                                <p class="tecnologies">JavaScript</p>
+                                <p class="tecnologies">HTML</p>
+                                <p class="tecnologies">CSS</p>
+                            </a>
+                        </div>
+
+                        <div class="proyect">
+                            <a href="http://localhost/PixelArt%20App/">
+                                <img src="./img/proyect3.png" alt="proyect">
+                                <p>DrawPixel - Pixel art creator</p>
+                                <p class="tecnologies">PHP</p>
+                                <p class="tecnologies">JavaScript</p>
+                                <p class="tecnologies">HTML</p>
+                                <p class="tecnologies">CSS</p>
+                            </a>
+                        </div>
+
+                        <div class="proyect">
+                            <a href="http://localhost/MemoryColors/">
+                                <img src="./img/proyect4.png" alt="proyect">
+                                <p>MemoryColors - Game</p>
+                                <p class="tecnologies">JavaScript</p>
+                                <p class="tecnologies">HTML</p>
+                                <p class="tecnologies">CSS</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+
+        <div class="container-body">
+            <h2 id="skills">Some Skills:</h2>
+        </div>
+        <div class="container-body-2">
+            <div class="skills">
+                <p>Java</p>
+                <p>JavaScript</p>
+                <p>React</p>
+                <p>GIT</p>
+                <p>Jquery</p>
+                <p>PHP</p>
+                <!--<p>C#</p>-->
+                <p>Json</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>bootstrap</p>
+                <p>MySQL</p>
+                <p>bash</p>
+                <p>Less</p>
+                <p>Sass</p>
+                <p>CodeIgniter</p>
+                <p>Laravel</p>
+                <!--Clean float-->
+                <div class="clean-float"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright Carlos Salas</p>
+    </div>
+</body>
+</html>

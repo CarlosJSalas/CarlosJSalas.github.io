@@ -1,0 +1,316 @@
+
+/*BODY*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /*background-color: rgb(19, 19, 19);*/
+    background-color: rgb(28, 28, 28);
+    padding: 0px;
+    margin: 0px;
+}
+.container-body{
+    padding: 0px 25%;
+}
+
+.container-body-2{
+    padding: 0px 5%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span{
+    color: white;
+    font-family: 'Jost', sans-serif;
+}
+@media (max-width: 1200px){
+    .container-body{
+        padding: 0px 10%;
+    }
+}
+@media (max-width: 800px){
+    .container-body{
+        padding: 0px 8%;
+    }
+}
+
+h2{
+    margin-top: 0px;
+}
+
+/*MENU*/
+.menu ul li{
+    display: inline;
+}
+.menu ul li a{
+    width: fit-content;
+    padding: 7px 10px;
+    margin: 0px 4px;
+    background-color: rgb(28, 28, 28);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: 0.17s;
+}
+.menu ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.menu{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgb(28, 28, 28);
+}
+
+
+
+
+/*BANNER*/
+.banner, .banner img{
+    width: 100%;
+}
+
+.banner img{
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 500px){
+    .banner img{
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.mobile{
+    display: none;
+}
+
+/* Bottom left text */
+.banner h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    /*text-shadow: 1px 1px 5px rgb(53, 53, 53);*/
+    background-color: #000000;
+    padding: 0px 10px;
+    border-radius:  0px 20px 20px 20px;
+}
+
+/*OTHER*/
+.clean-float{
+  overflow: hidden;
+  width: 100%;
+}
+
+/*PROYECTS*/
+.proyects{
+    text-align: center;
+}
+.proyects div{
+    text-align: left;
+    display: inline-table;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    transition: 0.16s;
+}
+.proyects div:hover{
+    transform: scale(1.1);
+}
+.proyects div a p{
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    color: black;
+}
+.proyects div a{
+    text-decoration: none;
+}
+
+.proyects div a img{
+    width: 320px;
+    height: 170px;
+    object-fit: cover;
+    margin:0px auto;
+    border-radius: 14px 14px 0px 0px;
+}
+
+
+.proyect:hover .tecnologies{
+    display: block;
+}
+
+.tecnologies{
+    padding: 6px 20px;
+    font-size: 16px !important;
+    width: max-content;
+    margin-left: 15px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 50px;
+    color: white !important;
+    transition: 0.2s;
+    display: none;
+}
+
+.tecnologies:hover{
+    background-color: rgb(24, 71, 68);
+}
+
+@media (max-width: 1600px){
+    .proyects div a img{
+        width: 300px;
+        height: 150px;
+    }
+}
+@media (max-width: 1460px){
+    .proyects div a img{
+        width: 350px;
+        height: 170px;
+    }
+}
+@media (max-width: 1260px){
+    .proyects div a img{
+        width: 350px;
+        height: 200px;
+    }
+}
+@media (max-width: 960px){
+    .proyects div a img{
+        max-width:100%;
+        height: 200px;
+    }
+}
+
+
+
+/*FOOTER*/
+.footer{
+    margin-top: 90px;
+    text-align: center;
+}
+
+
+
+/*SKILLS*/
+.skills{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+}
+
+.skills p{
+    font-size: 20px;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    background-image: linear-gradient(45deg, rgb(0, 69, 118), rgb(5, 208, 201));
+    border-radius: 40px;
+}
+
+@media (max-width: 2000px){
+    .skills{
+        width: 900px;
+    }
+}
+
+@media (max-width: 1100px){
+    .skills{
+        width: 600px;
+    }
+}
+
+@media (max-width: 720px){
+    .skills{
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px){
+    .skills{
+        width: 230px;
+    }
+}
+
+
+
+/*ABOUT*/
+.about{
+    display: block;
+    text-align: center;
+}
+.about p, .about h2{
+    text-align: justify;
+}
+.about .profile{
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+    padding: 2px;
+    background-color: white;
+    object-fit: cover;
+    position: relative;
+    top: -80px;
+}
+
+@media (max-width: 500px){
+    .about .profile{
+        width: 110px;
+        height: 110px;
+        top: -67px;
+    }
+}
+
+.social{
+    margin-top: 40px;
+}
+
+.social ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.social ul li{
+    display: inline;
+    margin: 2px;
+}
+
+.social ul li a img{
+    border: 2px solid #000000;
+    border-radius: 50px;
+    padding: 4px;
+    background-color: #000000;
+    transition: 0.1s;
+}
+
+.social ul li a img:hover{
+    /*filter: invert(1);*/
+    border-color: cyan;
+
+}
+
+.card-1{
+    background-image: linear-gradient(45deg, rgb(0, 69, 118), rgb(5, 208, 201));
+    padding-bottom: 60px;
+    margin: 50px 0px;
+}
+
+
+.card-1 h2{
+    padding-top: 50px;
+}
