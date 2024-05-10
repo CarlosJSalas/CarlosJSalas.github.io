@@ -64,6 +64,12 @@ window.onload = function(){ //wait for load entire site
 
     // Event listener to change menu state when window is resized
     window.addEventListener('resize', toggleMenuVisibility);
+
+    document.querySelector('#copyMail').addEventListener('click', function() {
+        navigator.clipboard.writeText("casus.cjbs@gmail.com");
+        document.getElementById("copyMail").innerHTML = "Copied!";
+    });
+
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
