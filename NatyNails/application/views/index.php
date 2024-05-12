@@ -1,0 +1,11 @@
+        <?php
+            require_once(APPPATH."views/components/header.php");
+            require_once(APPPATH."views/components/banner.php");
+            require_once(APPPATH."views/components/home-body.php");
+            require_once(APPPATH."views/components/mini-gallery.php");
+            require_once(APPPATH."views/components/mini-shop.php");
+            require_once(APPPATH."views/components/card-info.php");
+            require_once(APPPATH."views/components/prices.php");
+            require_once(APPPATH."views/components/big-links.php");
+            require_once(APPPATH."views/components/footer.php");
+        ?>
