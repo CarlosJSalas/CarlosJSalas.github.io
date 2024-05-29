@@ -1,0 +1,97 @@
+:root {
+    /*Colors*/
+    --white: #fff;
+    --soft-blue: #e7eaf6;
+    --box-shadow: #0000000f;
+    /*Fonts*/
+    --main-font: "Poppins", sans-serif;
+}
+
+body, html{
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--soft-blue);
+}
+
+.center-container{
+    /*padding: 0px 10%;*/
+}
+
+.game-board{
+    display: block;
+    margin-top: 150px;
+}
+
+.line{
+    display: flex;
+    width: max-content;
+    margin: auto;
+}
+
+.icon{
+    background-color: var(--white);
+    box-shadow: 0px 3px 10px 5px var(--box-shadow);
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(236, 195, 255);
+}
+
+.icon-img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    padding: 7px;
+}
+
+.icon:active{
+    background-color: rgb(244, 161, 255);
+    transform: scale(0.9);
+}
+
+.img-cheked{
+    background-color: rgb(116, 232, 157) !important;
+}
+
+.img-cloned{
+    background-color: rgb(255, 0, 123) !important;
+}
+
+.img-cheked img{
+    filter: invert(1) brightness(2);
+}
+
+.img-cloned img{
+    filter: invert(1) brightness(2);
+}
+
+.inline-butons{
+    display: flex;
+    margin: auto;
+    width: 310px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.simple-button{
+    padding: 10px;
+    background-color: white;
+    flex: 1;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.simple-button:hover{
+    background-color: rgb(255, 0, 123);
+    color: white;
+}
