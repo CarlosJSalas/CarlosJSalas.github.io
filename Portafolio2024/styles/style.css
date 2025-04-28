@@ -483,19 +483,23 @@ html{
 }
 
 .proyect-title{
-    margin: 10px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     font-size: 34px;
     color: var(--tertiary-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1; 
 }
 
 .proyect-text{
-    margin: 15px 0px 15px 0px;   
+    margin: 0px 0px 15px 0px;   
     color: var(--tertiary-color);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     /* Especifica el número máximo de líneas que deseas mostrar */
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 7; 
 }
 
 .proyect-link{
@@ -1127,3 +1131,6 @@ html{
         height: 200px;
     }
 }
+
+
+
