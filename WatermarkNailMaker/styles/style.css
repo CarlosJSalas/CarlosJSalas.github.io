@@ -1,0 +1,326 @@
+.font_1{
+    max-width: max-content;
+    font-family: 'Fredoka', sans-serif;
+    color: rgb(150, 4, 255);
+    /*background: -webkit-linear-gradient(rgb(153, 0, 255),rgb(211, 123, 255),rgb(193, 7, 255),rgb(153, 0, 255));
+    background-color: rgb(150, 4, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}
+
+.font_2{
+    max-width: max-content;
+    font-family: 'Lexend', sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 115, 255);
+    padding: 0px 15px;
+    border-radius: 40px;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    margin: 0px 20%;
+    background-color: rgb(247, 247, 247);
+}
+
+html{
+    height: 100%;
+}
+
+@media (max-width: 1200px) {   
+    body{
+        margin: 0px 10%;
+    }
+}
+
+@media (max-width: 700px) {   
+    body{
+        margin: 0px 5%;
+    }
+        
+    .title{
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    body{
+        margin: 0%;
+    }
+    .font_1, .font_2{
+        font-size: 25px;
+    }
+}
+
+.imgImport{
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    /*border-radius: 10px;*/
+    width: 490px;
+    height: 490px;
+}
+
+.container{
+    /*background-color: rgb(245, 243, 255);*/
+    border-radius: 5px;
+    padding: 10px 0px;
+    /*border-color: white;*/
+    background-color: white;
+}
+
+
+.waterStyle{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 115, 255);
+    margin: 5px auto;
+    font-size: 20px;
+    border: 2px solid;
+    border-color: rgb(0, 115, 255);
+    box-shadow: 0px 3px 10px rgb(209, 209, 209);
+}
+
+.waterStyle span:hover{
+    background-color: rgb(178, 213, 255);
+    cursor: pointer;
+    color: white;
+}
+
+.waterStyle span{
+    padding: 0px 10px !important;
+    transition: 0.1s;
+    border-radius: 50px;
+    padding: 0px 7px;
+}
+
+.optionsContainer{
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.ButtonType1{
+    display: inline-block;
+    color: rgb(150, 4, 255);
+    background-color: white;
+    border: 2px solid;
+    border-color: rgb(150, 4, 255);
+    border-radius: 7px;
+    padding: 5px 15px;
+    max-width: max-content;
+    transition: 0.2s;
+}
+
+.ButtonType1:hover{
+    cursor: pointer;
+    background-color: rgb(150, 4, 255);
+    color: white;
+}
+
+.buttonContainer{
+    text-align: center;
+    display: block;
+    background-color: #ffffff;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px rgb(209, 209, 209);
+    margin-bottom: 10px;
+}
+
+.colorBlue{
+    color: rgb(0, 115, 255);
+}
+
+/* IMG IMPORTANT */
+
+.style1{
+    font-family: 'Pacifico', cursive;
+}
+
+.imageContainer {
+    margin: auto;
+    width: max-content;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+  
+  /* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+  
+  /* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+  
+  /* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+  
+  /* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+  
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.miniTitle{
+    color: rgb(150, 4, 255);
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+    margin: 0px 7px;
+}
+
+.solialIcon{
+    width: 30px;
+    filter: invert(48%) sepia(79%) saturate(5000%) hue-rotate(235deg) brightness(118%) contrast(119%);
+    transition: 0.2s;
+    vertical-align: bottom;
+    margin-bottom: 2px;
+}
+
+.svg-container{
+    margin: 0px 9px;
+}
+
+.solialIcon:hover{
+    cursor: pointer;
+    filter: invert(48%) sepia(79%) saturate(5000%) hue-rotate(222deg) brightness(118%) contrast(119%);
+}
+
+#importImg{
+    display: none;
+}
+
+#waterContainer div{
+    font-size: 24px;
+    font-family: 'Corinthia', cursive;
+}
+
+#water1{
+    display: none; 
+}
+#water2{
+    display: none; 
+}
+#water3{
+    display: block; 
+}
+#water4{
+    display: none; 
+}
+#water5{
+    display: none; 
+}
+
+#finalImgContainer{
+    display: none;
+}
+
+.defauldValue{
+    background-color: rgb(0, 115, 255);
+    color: white;
+}
+
+.fontStyle1{
+    font-family: 'Corinthia', cursive !important;
+}
+
+.fontStyle2{
+    font-family: 'Great Vibes', cursive !important;
+}
+
+.fontStyle3{
+    font-family: 'Lobster', cursive !important;
+}
+
+.fontStyle4{
+    font-family: 'Sen', sans-serif !important;
+}
+
+.breakMobile{
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .breakMobile{
+        display: block;
+    }
+    .imgImport{
+        width: 300px;
+        height: 300px;
+    }
+
+    .waterStyle{
+        text-align: center;
+        padding: 5px 10px;
+        margin: 5px auto;
+        font-size: 20px;
+        border: 0px solid;
+        border-color: rgb(0, 115, 255);
+    }
+
+    .optionsContainer{
+        padding: 0px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.colorChange{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 115, 255);
+}
+
+.colorChangeContainer{
+    background-color: rgb(0, 115, 255);
+    color: white;
+}
+
+.colorBlack{
+    color: black !important;
+}
+
+.colorWhite{
+    color: white !important;
+    text-shadow: 0px 3px 10px rgb(139, 139, 139);
+}
+
+.refreshIcon{
+    display: block;
+    margin: auto;
+    width: 30px;
+    filter: invert(48%) sepia(79%) saturate(5000%) hue-rotate(235deg) brightness(118%) contrast(119%);
+    transition: 0.2s;
+    margin-bottom: 2px;
+}

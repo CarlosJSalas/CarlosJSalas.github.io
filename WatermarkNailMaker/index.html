@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/htmltocanvas.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!--FONTS FOR LABEL-->
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia&family=Great+Vibes&family=Lobster&family=Sen&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+    <title>Nail Watermark creator</title>
+</head>
+<body>
+    <h1 class="title"><span class="font_1">NatyNails </span><br class="breakMobile"><span class="font_2">Watermark Maker</span></h1>
+    <div class="container">
+        <div class="buttonContainer">
+            <span class="miniTitle">NatyNails</span>
+            <label id="importB" class="ButtonType1" for="importImg">Import
+                <input type="file" id="importImg" name="img" accept="image">
+            </label>
+            <div id="downloadB" class="ButtonType1">Download</div>
+            
+            <br class="breakMobile">
+            <span class="svg-container">
+                <img class="solialIcon" src="./img/square-youtube.svg" alt="square-facebook">
+                <img class="solialIcon" src="./img/instagram.svg" alt="square-facebook">
+                <img class="solialIcon" src="./img/square-facebook.svg" alt="square-facebook">
+                <img class="solialIcon" src="./img/whatsapp.svg" alt="square-facebook">
+            </span>
+        </div>
+        <div id="imageContainer1" class="imageContainer">
+            <img id="importedImage" class="imgImport" src="./img/defaultimage1.jpg" alt="dummyimage" >
+            <div id="waterContainer">
+                <div id="water1" class="top-left colorWhite">NatyNailArt</div>
+                <div id="water2" class="top-right colorWhite">NatyNailArt</div>
+                <div id="water3" class="centered colorWhite">NatyNailArt</div>
+                <div id="water4" class="bottom-left colorWhite">NatyNailArt</div>
+                <div id="water5" class="bottom-right colorWhite">NatyNailArt</div>
+            </div>
+        </div>
+        <div id="finalImgContainer"></div>
+        
+        <div class="optionsContainer">
+            <div class="waterStyle">
+                Size
+                <br class="breakMobile">
+                <span class="colorBlue" id="fontSize1">16</span>
+                <span class="colorBlue" id="fontSize2">20</span>
+                <span class="defauldValue" id="fontSize3">24</span>
+                <span class="colorBlue" id="fontSize4">28</span>
+                <span class="colorBlue" id="fontSize5">32</span>
+                <span class="colorBlue" id="fontSize6">36</span>
+            </div>
+            
+            <br class="breakMobile">
+            <div class="waterStyle colorChangeContainer">
+                color
+                <span class="colorChange" id="colorChange">White</span>
+            </div>
+            <br>
+            <div class="waterStyle">
+                Styles
+                <br class="breakMobile">
+                <span class="defauldValue" id="buttonStyle1">1</span>
+                <span class="colorBlue" id="buttonStyle2">2</span>
+                <span class="colorBlue" id="buttonStyle3">3</span>
+                <span class="colorBlue" id="buttonStyle4">4</span>
+            </div>
+            <br class="breakMobile">
+            <div class="waterStyle">
+                Position
+                <br class="breakMobile">
+                <span class="colorBlue" id="buttonPosition1">↖</span>
+                <span class="colorBlue" id="buttonPosition2">↗</span>
+                <span class="defauldValue" id="buttonPosition3">+</span>
+                <span class="colorBlue" id="buttonPosition4">↙</span>
+                <span class="colorBlue" id="buttonPosition5">↘</span>
+            </div> 
+        </div>
+        <img class="refreshIcon" src="./img/rotate-solid.svg" alt="square-facebook">
+    </div>
+</body>
+</html>
