@@ -215,9 +215,9 @@ html{
 }
 
 .about-me-info{
-    flex-basis: 60%;
+    flex-basis: 100%;
     animation: spawn 1s ease-in-out;
-    margin: auto 2%;
+    margin: 2%;
 }
 
 .about-me-title{ /*About Me*/
@@ -483,8 +483,8 @@ html{
 }
 
 .proyect-title{
-    margin: 0px;
-    font-size: 24px;
+    margin: 10px 0px 0px 0px;
+    font-size: 34px;
     color: var(--tertiary-color);
 }
 
@@ -763,8 +763,10 @@ html{
     color: var(--always-white);
 }
 
-
-
+.pixelated-img{
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
 
 
   
@@ -1125,6 +1127,3 @@ html{
         height: 200px;
     }
 }
-
-
-
