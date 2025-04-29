@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheCatGame</title>
+    <!--STYLES-->
+    <link rel="stylesheet" href="./styles/mainPage.css">
+
+    <!--SCRIPTS-->
+    <script src="./scripts/weponsCarrouselController.js"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+    <div class="z-index-5 main-menu">
+        <p class="text-menu">CatGame</p>
+        <a class="white-link" href="#">Preskit</a>
+    </div>
+    -->
+    
+    <div class="img_blurry_banner_container border_bottom img_banner">
+        <img src="./media/img/captures/Capture (15).png" alt="bannerImg" class="pixelated-img"> <!--img_blurry_banner-->
+    </div>
+
+    <div class="margin_wrapper">
+        <div class="inline_content_same_space">
+            <div class="text_container flex_1">
+                <div class="inline_content">
+                    <h1 class="simple-title">Discover <span class="hightlight_color">habilities</span> </h1>
+                </div>
+                <p class="simple_text">Unleash your potential by discovering powerful <span class="hightlight_color">abilities</span> hidden throughout the world. Master new moves, enhance your strength, and adapt to any <span class="hightlight_color">challenge</span>. Every discovery brings you closer to becoming unstoppable in your journey.</p>
+                <!--<br>-->
+            </div>
+            <div class="img_inline_container flex_1">
+                <img class="img_inline pixelated-img" src="./media/img/captures/Capture (6).png" alt="gameplayImg">
+            </div>
+        </div>
+
+        <hr class="hr_division">
+        
+        <div class="inline_content_same_space">
+            <div class="img_inline_container flex_1">
+                <img class="img_inline pixelated-img" src="./media/img/captures/Capture (10).png" alt="gameplayImg">
+            </div>
+            <div class="text_container flex_1">
+                <div class="inline_content align_right">
+                    <h1 class="simple-title">Explore <span class="hightlight_color2">dungeons</span></h1>
+                </div>
+                <p class="simple_text">Explore the depths of the underground and uncover ancient secrets, powerful weapons, and legendary gear. Face deadly traps, <span class="hightlight_color2">dangerous</span> enemies, and survive the hidden mysteries lurking in every corner. Upgrade your equipment and master new abilities to overcome the growing <span class="hightlight_color2">challenges</span>. Every dungeon will test your courage, wit, and determination.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="img_blurry_banner_container border_bottom img_banner">
+        <img src="./media/img/captures/Capture (16).png" alt="bannerImg" class="pixelated-img"> <!--img_blurry_banner-->
+    </div>
+
+    <div class="margin_wrapper">
+
+        <hr class="hr_division">
+        
+        <!--
+
+        <div>
+            <video width="100%" height="auto" autoplay loop muted>
+                <source src="./media/img/shortGameplay.mp4" type="video/mp4">
+                Tu navegador no soporta videos en HTML5.
+            </video>
+        </div>
+        -->
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Henl-t5ZRG8?si=UBaFkJ3OsHDEuob9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="background_container">
+        <div class="inline_content align_center">
+            <!-- <img class="pixelated-img img-sticker" src="./media/img/player_with_borders.png" alt="player"> -->
+            <h1 class="simple-title">Unlock over <span class="hightlight_color">100</span> unique weapons</h1>
+            <!-- <img class="pixelated-img img-sticker" src="./media/img/bee_anim.gif" alt="player"> -->
+        </div>
+        <!--
+        <div class="inline_content_same_space">
+            <div class="img_inline_container flex_1">
+                <img class="img_inline" src="./media/img/img3.png" alt="gameplayImg">
+            </div>
+            <div class="img_inline_container flex_1">
+                <img class="img_inline" src="./media/img/img9.png" alt="gameplayImg">
+            </div>
+        </div>
+        -->
+
+        <div class="weapons-container">
+            <div class="flex_1 arrow_img_container hide-mobile" id="change_weapon_left">
+                <img src="./media/img/svg/arrow-right-solid.svg" class="arrow_img flip_x" alt="arrow_left">
+            </div>
+
+            <div class="weapon_card_container flex_4">
+                <div class="card_img_container">
+                    <img class="card_img pixelated-img slide_right_anim" id="weapon_img" src="./media/img/weapons/weapon (4).png" alt="gameplayImg">
+                </div>
+                <div class="weapon_info_container">
+                    <p class="card_title slide_right_anim" id="weapon_name">Demon Gun</p>
+                    <p class="card_info slide_right_anim" id="weapon_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="hightlight_color">Dolorum</span> illum necessitatibus dicta obcaecati quam mollitia, tempore nobis? Nihil blanditiis dolor <span class="hightlight_color">labore</span> id officiis quaerat. Ipsa necessitatibus molestiae esse quidem quia.</p>
+                    <ul class="card_skills">
+                        <li class="title_li slide_right_anim" id="weapon_damage"> Damage:<span class="content_li">8 (x6)</span> </li>
+                        <li class="title_li slide_right_anim" id="weapon_ammon_use"> Ammo use:<span class="content_li">20</span> </li>   
+                        <li class="title_li slide_right_anim" id="weapon_accuracy"> Accuracy:<span class="content_li">35% </span> </li>
+                        <li class="title_li slide_right_anim" id="weapon_fire_rate"> Fire Rate:<span class="content_li">0.6s</span> </li>   
+                    </ul>
+                </div>    
+            </div>
+
+            <div class="weapon_video_container flex_10">
+                <img class="weapon_gif spawn-anim pixelated-img" id="weapon_video" src="./media/img/weapons/videos/gif1.png" alt="gameplayImg">
+            </div>
+            
+            <div class="flex_1 arrow_img_container hide-mobile"  id="change_weapon_right">
+                <img src="./media/img/svg/arrow-right-solid.svg" class="arrow_img" alt="arrow_right">
+            </div>
+        </div>
+
+        <!--
+
+        <hr class="hr_division">
+
+        <div class="inline_content align_center">
+            <h1 class="simple-title z-index-5">Defeat Bosses</h1>
+        </div>
+
+        <div class="inline_content align_center">
+            <img class="full_img" src="./media/img/img10.png" alt="gameplayImg">
+        </div>
+
+        <div class="inline_content align_center">
+            <img class="boss_bar pixelated-img" src="./media/img/queen_bee_bar.png" alt="gameplayImg">
+        </div>
+        -->
+    </div>
+
+
+    <div class="margin_wrapper">
+        <div class="inline_content_same_space">
+            <div class="text_container flex_1">
+                <div class="inline_content align_right">
+                    <h1 class="simple-title margin-top-50">Defeat <span class="hightlight_color2">bosses</span></h1>
+                </div>
+                <p class="simple_text">Establish a strategy to defeat colossal <span class="hightlight_color2">bosses</span> guarding powerful <span class="hightlight_color">treasures</span>. Study their attacks, exploit their weaknesses, and claim victory to earn rare rewards, powerful weapons, and valuable upgrades to enhance your gear. Overcoming these mighty foes will prove your strength and <span class="hightlight_color">determination</span> in the face of the world's greatest challenges.</p>
+            </div>
+        </div>
+        
+        <hr class="hr_division">
+
+        <div class="inline_content_same_space">
+            
+            <div class="img_inline_container flex_1">
+                <img class="img_inline pixelated-img" src="./media/img/captures/Capture (12).png" alt="gameplayImg">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">© Carlos Salas</footer>
+</body>
+</html>
